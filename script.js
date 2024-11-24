@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  var form = document.getElementById('form');
-  var sendButton = document.getElementById('sendButton');
-  var modalButton = document.querySelector(".modal__button");
-  var modalContainer = document.querySelector(".container");
-  var modal = document.querySelector(".modal");
-  var closeIcon = document.querySelector(".close__icon");
-  var container = document.getElementById("container");
+  let form = document.getElementById('form');
+  let sendButton = document.getElementById('sendButton');
+  let modalButton = document.querySelector(".modal__button");
+  let modalContainer = document.querySelector(".container");
+  let modal = document.querySelector(".modal");
+  let closeIcon = document.querySelector(".close__icon");
+  let container = document.getElementById("container");
 
   function close() {
       modalContainer.classList.remove('active');
