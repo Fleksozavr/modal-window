@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
       modalContainer.classList.remove('active');
       modal.classList.remove('active');
       
-      const nameInput = document.getElementById('name');
-      const surnameInput = document.getElementById('surname');
+      let nameInput = document.getElementById('name');
+      let surnameInput = document.getElementById('surname');
       
       nameInput.value = '';
       surnameInput.value = '';
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   form.addEventListener('input', () => {
-      const name = document.getElementById('name').value.trim();
-      const surname = document.getElementById('surname').value.trim();
+      let name = document.getElementById('name').value.trim();
+      let surname = document.getElementById('surname').value.trim();
       
       sendButton.disabled = !(name && surname);
   });
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
   sendButton.addEventListener('click', (event) => {
       event.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
-      const surname = document.getElementById('surname').value.trim();
+      let name = document.getElementById('name').value.trim();
+      let surname = document.getElementById('surname').value.trim();
 
       if (!name || !surname) {
-          const confirmResult = confirm("Пожалуйста, заполните все поля. Нажмите 'ОК' для продолжения или 'Отмена' для закрытия модального окна.");
+          let confirmResult = confirm("Пожалуйста, заполните все поля. Нажмите 'ОК' для продолжения или 'Отмена' для закрытия модального окна.");
           if (confirmResult) {
               return;
           } else {
